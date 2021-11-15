@@ -1,0 +1,39 @@
+.react {
+  background: aqua;
+  color: black;
+  font-size: 48px;
+  font-weight: bold;
+  padding: 16px;
+}
+
+$orange: orange;
+
+.react-2 {
+  .box {
+    width: 100px;
+    height: 100px;
+
+    &.orange {
+      background: $orange;
+    }
+    &.red {
+      background: red;
+    }
+    &.blue {
+      background: blue;
+    }
+    &:hover {
+      background: black;
+    }
+    & + .box {
+      margin-top: 10px;
+    }
+
+  }
+}
+
+@media screen and  (max-width:640px) {
+  .react-2 {
+    background: green;
+  }
+}

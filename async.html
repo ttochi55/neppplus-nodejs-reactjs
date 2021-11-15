@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 함수의 제어권을 넘긴다는 의미도 된다.
+    function increase(number, callback)  {
+      setTimeout(() => {
+        // const result = number +10;
+        // if(callback) {
+        //   callback(result);
+        // }
+        callback(number + 10);
+      }, 1000);
+    }
+
+    // increase(0, (result) => {
+    //   console.log(result);
+    // });
+
+    const func = (retult) => {
+      console.log(result);
+    }
+
+    increase(0, func);
+  </script>
+</body>
+</html>
