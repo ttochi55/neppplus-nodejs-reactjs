@@ -6,36 +6,20 @@ import styled from "styled-components";
 // 3. 변수에 따라서 Menu 컴포넌트 조절
 
 // Using Javascript: Remove and create new DOM object.
-// const Dropdown = () => {
-//   const [active, setActive] = useState(false);
-
-//   return (
-//     <Wrapper active={active}>
-//       <Button onClick={() => setActive(!active)}>dropdown</Button>
-//       {active && (
-//         <Menu>
-//           {data.map(({ id, text }) => (
-//             <Item key={id}>{text}</Item>
-//           ))}
-//         </Menu>
-//       )}
-//     </Wrapper>
-//   );
-// };
-
-// Using CSS: Just Visibility DOM object.
 const Dropdown = () => {
   const [active, setActive] = useState(false);
 
   return (
-    <Wrapper>
+    <Wrapper active={active}>
       <Button onClick={() => setActive(!active)}>dropdown</Button>
-      <Menu active={active}>
-        <Item>Item1</Item>
-        <Item>Item2</Item>
-        <Item>Item3</Item>
-        <Item>Item4</Item>
-      </Menu>
+      {active && (
+        <Menu>
+          <Item>Item1</Item>
+          <Item>Item2</Item>
+          <Item>Item3</Item>
+          <Item>Item4</Item>
+        </Menu>
+      )}
     </Wrapper>
   );
 };
@@ -63,10 +47,7 @@ const Menu = styled.ul`
   border: 1px solid #ddd;
 
   /* Using Javascript */
-  /* display: none; */
-
-  /* Using CSS */
-  display: ${({ active }) => !active && "none"};
+  display: none;
 `;
 const Item = styled.li`
   padding: 10px 15px;

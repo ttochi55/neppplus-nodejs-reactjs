@@ -3,6 +3,7 @@ import styled, { css } from "styled-components";
 
 // const Accordion = (props) => {
 const Accordion = ({ data }) => {
+  // 현재 어떤 아이템이 선택이 되어 있는지 확인
   const [activeIndex, setActiveIndex] = useState(1);
 
   const handleIndex = (index) => {

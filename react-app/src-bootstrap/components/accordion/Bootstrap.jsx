@@ -1,6 +1,5 @@
 import React from "react";
 import Accordion from "./Accordion";
-import Dropdown from "./Dropdown";
 
 const accordionData = [
   {
@@ -32,7 +31,6 @@ const accordionData = [
 const Bootstrap = () => {
   return (
     <div>
-      <Dropdown />
       <Accordion data={accordionData} />
     </div>
   );
