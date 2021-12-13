@@ -1,6 +1,6 @@
 const naver = {
-  Client_ID: "kOfc3ujYLh572YDBY47q",
-  Client_Secret: "tTAzV1IoTV",
+  Client_ID: "",
+  Client_Secret: "",
 };
 
 export default naver;

@@ -4,14 +4,19 @@ import path from "path";
 import cookieParser from "cookie-parser";
 import logger from "morgan";
 import cors from "cors";
+import dotenv from "dotenv";
 
 import indexRouter from "./routes/index.js";
 import usersRouter from "./routes/users.js";
 import bookRouter from "./routes/book.js";
 import movieRouter from "./routes/movie.js";
+import userRouter from "./routes/user.js";
+import postRouter from "./routes/post.js";
+import uploadRouter from "./routes/upload.js";
 
 const __dirname = path.resolve();
 var app = express();
+dotenv.config();
 
 app.use(cors({ origin: "http://localhost:3000" }));
 
@@ -30,6 +35,9 @@ app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/book", bookRouter);
 app.use("/movie", movieRouter);
+app.use("/user", userRouter);
+app.use("/post", postRouter);
+app.use("/upload", uploadRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
